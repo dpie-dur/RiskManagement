@@ -1,0 +1,50 @@
+{
+	"Credential": "cf",
+	"Template": {
+		"Id": "@ext-mdkvsc-npm-dev/generator-mdk",
+		"Name": "CRUD",
+		"Version": "0.0.1"
+	},
+	"CF": {
+		"Target": "https://api.cf.us10-001.hana.ondemand.com",
+		"Organization": "436dec63-84f8-46e5-94d8-328a564ded0f",
+		"Space": "a591c26a-3ec6-4ae7-9eef-5b452fc2e117"
+	},
+	"MobileService": {
+		"Type": "standard",
+		"AdminAPI": "https://mobile-service-cockpit-api.cfapps.us10.hana.ondemand.com/cockpit/v1/org/436dec63-84f8-46e5-94d8-328a564ded0f/space/a591c26a-3ec6-4ae7-9eef-5b452fc2e117",
+		"AppId": "lcap.RiskM1.RiskMobile",
+		"Destination": [
+			"RiskMV1Service"
+		],
+		"Create": true,
+		"DestinationName": "RiskMV1Service",
+		"DestinationUrl": "https://13802b29trial-dev-riskm1-srv.cfapps.us10-001.hana.ondemand.com/service/RiskM1Svcs",
+		"Uaa": "RiskM1-uaa"
+	},
+	"Onboarding": {
+		"Schema": "sapmobilesvcs",
+		"TimeZone": "UTC",
+		"URL": "sapmobilesvcs://?AppId=lcap.RiskM1.RiskMobile&ClientId=82a0d8c2-151d-42f4-bcb7-fb68db1782ce&ServerUrl=https://13802b29trial-dev-lcap-riskm1-riskmobile.cfapps.us10-001.hana.ondemand.com&SapCloudPlatformEndpoint=https://13802b29trial-dev-lcap-riskm1-riskmobile.cfapps.us10-001.hana.ondemand.com&AuthorizationEndpointUrl=https://13802b29trial-dev-lcap-riskm1-riskmobile.cfapps.us10-001.hana.ondemand.com/oauth2/api/v1/authorize&RedirectUrl=https://13802b29trial-dev-lcap-riskm1-riskmobile.cfapps.us10-001.hana.ondemand.com&TokenUrl=https://13802b29trial-dev-lcap-riskm1-riskmobile.cfapps.us10-001.hana.ondemand.com/oauth2/api/v1/token&multiUser=false"
+	},
+	"LCAP": {
+		"FullName": "",
+		"Service": [
+			{
+				"mdk": "RiskMobile/Services/service1.service",
+				"cap": {
+					"name": "RiskMV1Service",
+					"sourcePath": "srv/service.cds",
+					"path": "/service/RiskM1Svcs/",
+					"entryPath": "/service/RiskM1Svcs",
+					"destination": "RiskM1-app-srv",
+					"value": "1"
+				}
+			}
+		],
+		"sourceTemplate": {
+			"id": "html5moduletemplates.basicSAPUI5ApplicationProjectModule",
+			"version": "1.40.12"
+		}
+	}
+}
